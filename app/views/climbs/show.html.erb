@@ -6,5 +6,9 @@
 	</header>
 
 	<div id="content">
-		<%= @climb.content %>
+		<%= markdown @climb.content %>
 	</div>
+</div>
+
+<%= link_to "Edit", edit_climb_path(@climb) %>
+<%= link_to "Delete", climb_path(@climb), method: :delete, data: { confirm: "Are you sure you want to delete this climb post?" } %>
