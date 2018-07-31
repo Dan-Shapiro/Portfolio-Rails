@@ -1,42 +1,10 @@
 <div id="post_show_content" class="skinny_wrapper wrapper_padding">
 	<header>
-		<p class="date">Monday July 30th</p>
+		<p class="date"><%= @climb.created_at.strftime("%A, %B %d") %></p>
 		<h1><%= @climb.title %> <span class="grade"><%= @climb.grade %></span></h1>
 		<hr>
 	</header>
 
-	<%= link_to "Edit", edit_climb_path(@climb) %>
-	<%= link_to "Delete", climb_path(@climb), method: :delete, data: { confirm: "Are you sure you want to delete this climb post?" } %>
-
 	<div id="content">
-		<h2>Aesthetic mixtape af</h2>
-		<p>
-			 Knausgaard subway tile enamel pin skateboard. Pork belly hell of raclette cliche unicorn hexagon truffaut gentrify. You probably haven't heard of them narwhal austin street art pour-over, fam shoreditch letterpress brunch humblebrag lomo activated charcoal irony umami paleo. Literally wayfarers shabby chic swag.
-		</p>
-
-		<p>
-			Chicharrones polaroid +1 gochujang knausgaard cloud bread. Keytar dreamcatcher pork belly tumeric prism PBR&amp;B freegan austin aesthetic butcher. Brooklyn banh mi polaroid activated charcoal you probably haven't heard of them gluten-free kitsch, green juice single-origin coffee forage keytar ramps prism thundercats kombucha. Af freegan waistcoat offal tilde. Vexillologist franzen portland, PBR&amp;B neutra XOXO retro kombucha ugh af farm-to-table kogi raclette bushwick four dollar toast. Paleo pitchfork skateboard knausgaard distillery lo-fi slow-carb meggings tousled roof party.
-		</p>
-
-		<p>
-			Photo booth poke vice, bushwick hashtag cred cronut keytar man bun vaporware retro tacos truffaut. Distillery gluten-free VHS post-ironic, helvetica unicorn cold-pressed polaroid copper mug. Pickled twee pabst trust fund tumblr lumbersexual whatever YOLO next level pour-over cornhole four loko hexagon hoodie unicorn. Aesthetic hell of succulents polaroid ethical. Lumbersexual cliche adaptogen put a bird on it taxidermy craft beer, fam gluten-free tumeric.
-		</p>
+		<%= @climb.content %>
 	</div>
-
-	<hr>
-
-	<div id="share_box">
-		<p>Share Climb One</p>
-		<%= link_to '#' do %>
-			<%= fa_icon 'twitter' %>
-		<% end %>
-		<%= link_to '#' do %>
-			<%= fa_icon 'facebook' %>
-		<% end %>
-		<%= link_to '#' do %>
-			<%= fa_icon 'google-plus' %>
-		<% end %>
-	</div>
-
-	<hr>
-</div>

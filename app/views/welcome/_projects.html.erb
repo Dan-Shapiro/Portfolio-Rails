@@ -1,8 +1,13 @@
 <h2>Stuff I've Built</h2>
 <hr>
-<h3><%= link_to "Project One", '#' %></h3>
-<p class="date">Monday July 30th</p>
-<h3><%= link_to "Project Two", '#' %></h3>
-<p class="date">Sunday July 29th</p>
-<h3><%= link_to "Project Three", '#' %></h3>
-<p class="date">Saturday July 28th</p>
+
+<% if @projects.count.zero? %>
+	<p>No project posts created yet.</p>
+<% end %>
+
+<% @projects.each do |project| %>
+	<h3>
+		<%= link_to project.title, project %>
+	</h3>
+	<p class="date"><%= project.created_at.strftime("%A, %b, %d") %></p>
+<% end %>
