@@ -8,6 +8,10 @@
 	<div id="content">
 		<%= markdown @climb.content %>
 	</div>
+
+	<hr>
+
+	<%= render 'disqus' %>
 </div>
 
 <%= link_to "Edit", edit_climb_path(@climb) %>

@@ -9,6 +9,10 @@
 	<div id="content">
 		<%= markdown @project.description %>
 	</div>
+
+	<hr>
+
+	<%= render 'disqus' %>
 </div>
 
 <%= link_to "Edit", edit_project_path(@project) %>
