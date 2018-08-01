@@ -21,6 +21,7 @@ gem 'pygments.rb'
 gem 'friendly_id'
 gem 'will_paginate'
 gem 'mail_form'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
