@@ -2,12 +2,15 @@
 	<header>
 		<p class="date"><%= @project.created_at.strftime("%A, %B %d") %></p>
 		<h1><%= @project.title %></h1>
-		<%= link_to "Check it out", @project.link %>
 		<hr>
 	</header>
 
 	<div id="content">
 		<%= markdown @project.description %>
+
+		<div class="button_wrapper">
+			<%= link_to "Check it out", @project.link, :class => "project_button", target: :_blank%>
+		</div>
 	</div>
 
 	<hr>
