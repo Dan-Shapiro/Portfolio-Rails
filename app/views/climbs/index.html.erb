@@ -1,66 +1,22 @@
 <h1 id="page_title">Stuff I've Climbed</h1>
 
 <div id="posts_wrapper" class="skinny_wrapper">
-	<div class="post">
-		<p class="date">Monday July 30th</p>
-		<h2>
-			<%= link_to '#' do %>
-				Climb One 
-				<span class="grade">V1</span>	
-			<% end %>
+	<% if @climbs.count.zero? %>
+		<p>No climbing posts created yet.</p>
+	<% end %>
+
+	<% @climbs.each do |climb| %>
+		<div class="post">
+			<p class="date"><%= climb.created_at.strftime("%A, %B %d") %></p>
+			<h2>
+				<%= link_to climb do %>
+					<%= climb.title %> 
+					<span class="grade"><%= climb.grade %></span>	
+				<% end %>
 			</h2>
-		<hr>
-	</div>
-	<div class="post">
-		<p class="date">Sunday July 29th</p>
-		<h2>
-			<%= link_to '#' do %>
-				Climb Two 
-				<span class="grade">V2</span>	
-			<% end %>
-			</h2>
-		<hr>
-	</div>
-	<div class="post">
-		<p class="date">Saturday July 28th</p>
-		<h2>
-			<%= link_to '#' do %>
-				Climb Three 
-				<span class="grade">V3</span>	
-			<% end %>
-			</h2>
-		<hr>
-	</div>
-	<div class="post">
-		<p class="date">Friday July 27th</p>
-		<h2>
-			<%= link_to '#' do %>
-				Climb Four 
-				<span class="grade">V4</span>	
-			<% end %>
-			</h2>
-		<hr>
-	</div>
-	<div class="post">
-		<p class="date">Thursday July 26th</p>
-		<h2>
-			<%= link_to '#' do %>
-				Climb Five 
-				<span class="grade">V5</span>	
-			<% end %>
-			</h2>
-		<hr>
-	</div>
-	<div class="post">
-		<p class="date">Wednesday July 25th</p>
-		<h2>
-			<%= link_to '#' do %>
-				Climb Six 
-				<span class="grade">V6</span>	
-			<% end %>
-			</h2>
-		<hr>
-	</div>
+			<hr>
+		</div>
+	<% end %>
 </div>
 
 <%= render 'pagination' %>
