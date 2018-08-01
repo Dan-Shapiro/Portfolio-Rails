@@ -19,6 +19,7 @@ gem 'font-awesome-rails'
 gem 'redcarpet'
 gem 'pygments.rb'
 gem 'friendly_id'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

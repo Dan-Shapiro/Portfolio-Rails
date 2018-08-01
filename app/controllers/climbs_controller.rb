@@ -2,7 +2,7 @@ class ClimbsController < ApplicationController
 	before_action :find_climb, only: [:show, :edit, :update, :destroy]
 
   def index
-    @climbs = Climb.all.order("created_at DESC"
+    @climbs = Climb.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
   end
 
   def new
