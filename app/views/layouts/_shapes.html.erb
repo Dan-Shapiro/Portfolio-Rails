@@ -1,0 +1,20 @@
+<% 15.times do %>
+
+	<% top = rand %>
+	<% left = rand %>
+	<% shape_num = rand(3) + 1 %>
+
+	<% shape_color = '#9aefdd' if shape_num == 1 %>
+	<% shape_color = '#ebca7d' if shape_num == 2 %>
+	<% shape_color = '#e877a6' if shape_num == 3 %>
+
+	<div class="shape_container">
+		<div class="hexagon_container" style="
+				top: -webkit-calc((100% - 21.5em) * <%= top %> + 8.5em);
+				left: -webkit-calc((100% - 9em) * <%= left %> + .5em);
+				background-color: <%= shape_color %>;
+			">
+			<div class="hexagon" style="top:.5rem;left:.5rem;"></div>
+		</div>
+	</div>
+<% end %>
