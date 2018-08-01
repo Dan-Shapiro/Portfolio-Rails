@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 	resources :climbs
 	resources :projects
-	resources :contact
+	resources :contacts, only: [:new, :create]
 
 	root 'welcome#index'
 
