@@ -83,6 +83,9 @@
 		font-size: .8em;
 		text-transform: uppercase;
 		text-decoration: none;
+		&:hover {
+			color: $highlight;
+		}
 	}
 }
 

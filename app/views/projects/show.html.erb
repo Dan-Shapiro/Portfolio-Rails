@@ -9,7 +9,7 @@
 		<%= markdown @project.description %>
 
 		<div class="button_wrapper">
-			<%= link_to "Check out this project", @project.link, :class => "project_button", target: :_blank%>
+			<%= link_to "Check out this project", @project.link, :class => "button", target: :_blank%>
 		</div>
 	</div>
 
@@ -24,6 +24,3 @@
 
 	<%= render 'disqus' %>
 </div>
-
-<%= link_to "Edit", edit_project_path(@project) %>
-<%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure you want to delete this project post?" } %>

@@ -1,5 +1,11 @@
 <h1 id="page_title">Stuff I've Built</h1>
 
+<% if user_signed_in? %>
+	<div id="admin_links">
+		<%= link_to "New", new_project_path %>
+	</div>
+<% end %>
+
 <div id="posts_wrapper" class="skinny_wrapper">
 	<% if @projects.count.zero? %>
 		<p>No project posts created yet.</p>

@@ -23,6 +23,11 @@
 	box-sizing: border-box;
 }
 
+html {
+	background-color: $background;
+	color: $text;
+}
+
 body {
 	font-family: 'Raleway', sans-serif;
 }
@@ -209,4 +214,12 @@ input[type="submit"], .button {
 .button_wrapper {
 	margin: 4em 0 0 0;
 	text-align: center;
+}
+
+#disqus_thread {
+	border: 2px solid $border;
+	padding: 3px 5px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 5px;
 }

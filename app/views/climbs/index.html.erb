@@ -1,5 +1,11 @@
 <h1 id="page_title">Stuff I've Climbed</h1>
 
+<% if user_signed_in? %>
+	<div id="admin_links">
+		<%= link_to "New", new_climb_path %>
+	</div>
+<% end %>
+
 <div id="posts_wrapper" class="skinny_wrapper">
 	<% if @climbs.count.zero? %>
 		<p>No climbing posts created yet.</p>
