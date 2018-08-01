@@ -79,6 +79,8 @@ GEM
     ffi (1.9.25-x64-mingw32)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
+    friendly_id (5.2.4)
+      activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.1)
@@ -198,6 +200,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   duktape
   font-awesome-rails
+  friendly_id
   jbuilder (~> 2.5)
   normalize-rails
   pg (>= 0.18, < 2.0)

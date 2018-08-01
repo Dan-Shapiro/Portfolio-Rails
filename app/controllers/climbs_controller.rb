@@ -40,10 +40,10 @@ class ClimbsController < ApplicationController
   private
 
   def climb_params
-  	params.require(:climb).permit(:title, :grade, :content)
+  	params.require(:climb).permit(:title, :grade, :content, :slug)
   end
 
   def find_climb
-  	@climb = Climb.find(params[:id])
+  	@climb = Climb.friendly.find(params[:id])
   end
 end
