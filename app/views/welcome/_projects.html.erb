@@ -3,7 +3,7 @@
 
 <div class="bounding_box">
 	<% if @projects.count.zero? %>
-		<p>No project posts created yet.</p>
+		<p class="empty">No project posts created yet.</p>
 	<% end %>
 
 	<% @projects.each.with_index do |project, i| %>

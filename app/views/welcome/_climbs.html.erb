@@ -3,7 +3,7 @@
 
 <div class="bounding_box">
 	<% if @climbs.count.zero? %>
-		<p>No climbing posts created yet.</p>
+		<p class="empty">No climbing posts created yet.</p>
 	<% end %>
 
 	<% @climbs.each.with_index do |climb, i| %>
