@@ -1,14 +1,19 @@
 <h2>Stuff I've Climbed</h2>
 <hr>
 
-<% if @climbs.count.zero? %>
-	<p>No climbing posts created yet.</p>
-<% end %>
+<div class="bounding_box">
+	<% if @climbs.count.zero? %>
+		<p>No climbing posts created yet.</p>
+	<% end %>
 
-<% @climbs.each do |climb| %>
-	<h3>
-		<%= link_to climb.title, climb %>
-		<span class="grade"><%= climb.grade %></span>
-	</h3>
-	<p class="date"><%= climb.created_at.strftime("%A, %b, %d") %></p>
-<% end %>
+	<% @climbs.each.with_index do |climb, i| %>
+		<% if i > 0 %>
+			<hr>
+		<% end %>
+			<h3>
+				<%= link_to climb.title, climb %>
+				<span class="grade"><%= climb.grade %></span>
+			</h3>
+			<p class="date"><%= climb.created_at.strftime("%A, %b, %d") %></p>
+	<% end %>
+</div>

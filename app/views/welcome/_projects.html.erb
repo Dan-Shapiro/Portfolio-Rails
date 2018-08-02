@@ -1,13 +1,18 @@
 <h2>Stuff I've Built</h2>
 <hr>
 
-<% if @projects.count.zero? %>
-	<p>No project posts created yet.</p>
-<% end %>
+<div class="bounding_box">
+	<% if @projects.count.zero? %>
+		<p>No project posts created yet.</p>
+	<% end %>
 
-<% @projects.each do |project| %>
-	<h3>
-		<%= link_to project.title, project %>
-	</h3>
-	<p class="date"><%= project.created_at.strftime("%A, %b, %d") %></p>
-<% end %>
+	<% @projects.each.with_index do |project, i| %>
+			<% if i > 0 %>
+				<hr>
+			<% end %>
+		<h3>
+			<%= link_to project.title, project %>
+		</h3>
+		<p class="date"><%= project.created_at.strftime("%A, %b, %d") %></p>
+	<% end %>
+</div>

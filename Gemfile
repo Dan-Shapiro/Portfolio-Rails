@@ -22,6 +22,7 @@ gem 'friendly_id'
 gem 'will_paginate'
 gem 'mail_form'
 gem 'devise'
+gem 'devicon-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
