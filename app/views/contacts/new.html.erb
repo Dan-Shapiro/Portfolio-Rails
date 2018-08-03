@@ -1,6 +1,12 @@
 <h1 id="page_title">Shoot me an email!</h1>
 
 <div class="skinny_wrapper wrapper_padding">
+	<div class="bounding_box">
+		<p>This form currently does nothing. Email will be hooked up eventually. In the meantime you can reach me at <span class="em">ds.dan.shapiro@gmail.com</span>.</p>
+	</div>
+
+	<hr>
+
 	<%= form_for @contact do |f| %>
 		<%= f.label :name %><br>
 		<%= f.text_field :name, required: true %>
@@ -21,7 +27,8 @@
 		</div>
 
 		<div class="button_wrapper">
-			<%= f.submit 'Send Message', :class => "button" %>
+			<%#<%= f.submit 'Send Message', :class => "button" %>
+			<%= link_to "This button does nothing yet", "#", :class => "button" %>
 		</div>
 	<% end %>
 </div>
