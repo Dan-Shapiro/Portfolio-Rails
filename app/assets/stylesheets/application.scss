@@ -74,6 +74,15 @@ body {
 	border-bottom: 1px solid $border;
 }
 
+.logo_image {
+	border: none;
+	height: 6.5rem;
+	width: 6.5rem;
+	position: relative;
+	top: .2rem;
+	left: 0rem
+}
+
 .em {
 	color: $emphasis;
 }

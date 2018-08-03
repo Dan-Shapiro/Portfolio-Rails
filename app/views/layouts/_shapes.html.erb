@@ -15,7 +15,9 @@
 				left: -webkit-calc((100% - 9em) * <%= left %> + .5em);
 				background-color: <%= shape_color %>;
 			">
-			<div class="hexagon" style="top:.5rem;left:.5rem;"></div>
+			<div class="hexagon" style="top:.5rem;left:.5rem;">
+				<%= image_tag 'logo_middle', :class => "logo_image" %>
+			</div>
 		</div>
 	</div>
 <% end %>
