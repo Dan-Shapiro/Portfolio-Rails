@@ -7,4 +7,9 @@
 
 a {
 	color: $highlight;
+	text-decoration: none;
+	font-weight: bold;
+	&:hover {
+		color: $detail;
+	}
 }
