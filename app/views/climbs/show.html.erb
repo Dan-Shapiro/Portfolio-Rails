@@ -6,7 +6,9 @@
 	</header>
 
 	<div id="content">
-		<%= markdown @climb.content %>
+		<span class="markdown_desc">
+			<%= markdown @project.description %>
+		</span>
 	</div>
 
 	<% if user_signed_in? %>
